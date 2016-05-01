@@ -1,2 +1,2 @@
-# Algorithm
-altibase algorithm study
+# Altibase Algorithm Study
+
