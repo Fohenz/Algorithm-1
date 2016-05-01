@@ -14,3 +14,6 @@
 ### 내용 생성하기
 
 ### 특정 파일 (커밋) 무시하기
+
+## Markdown 문법
+http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
