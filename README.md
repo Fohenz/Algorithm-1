@@ -1,4 +1,5 @@
 # Altibase Algorithm Study
+* Altibase Algorithm Study 모임 페이지 입니다.
 
 ## 스터디 인원
 1. DM 팀 최두선
