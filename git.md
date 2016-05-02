@@ -1,10 +1,14 @@
-# Git 사용법
+# Git 
 
 ## 개요
 ### Git 이란 무엇인가 ?
+* Git 이란?
+  - Git은 분산형 버전 관리 시스템(DVCS) 이다.
+  - 만약 당신이 소스코드에 수정을 가한다면 그것에 대해 버전 관리 시스템에 마크(mark)하고 (즉 index/staging으로 add) 그러고 난 뒤 저장소로 추가(commit)한다
+  - Git 은 커밋을 당신의 지역 저장소로 하도록 하며 당신의 Remote 저장소로 동기화 하도록 돕는다
+* Git 과 Github 의 차이점
+  - Github 는 Git 을 사용하는 프로젝트를 지원하는 웹 기반의 호스팅 서비스이다.
 
-
-### Git 과 Github 의 차이점
 
 ### 주요 용어 정리
 * Repository - 저장소
@@ -25,8 +29,19 @@
   - 소스코드의 버전을 가리킨다. 
   - Git은 SHA1 ids으로 리비전을 구분한다. SHA1 ids는 160비트 으로 긴 편이고 16진수로 표현된다. 
   - 가장 최신버전은 HEAD로 불리는 주소로 표현되며 이전 버전은 HEAD~1으로 계속 그런 방식으로 버전이름을 가리킬 수 있다.
-
-
+* Staging Index
+  - Git 은 당신이 변경사항들을 명확하게 표기하길 요구하고 저장에 적절하게 수정사항들이 표기되길 원한다. 
+  - 예를들어 당신이 새로운 파일을 다음 변경사항에 적용하고 싶으면 소위 'staging index'에 그 파일들을 'add file' 명령을 이용해 넣으면 된다. 
+  - Staging index는 변경사항들에 대한 완벽한 스냅샷이다.
+* VCS( Version Control System ) 버전 관리 시스템
+  - 파일 변화를 시간에 따라 기록했다가 이후에 특정 시점의 버전을 다시 꺼내올 수 있는 시스템.
+  - 동일한 정보에 대한 여러 버전을 관리하게 되며, 버전을 통해 시간적으로 변경 사항과 변경 사항을 작성한 작업자를 추적할 수 있다.
+* DVCS( Distributed Version Control System ) 분산 버전 관리 시스템
+  - 클라이언트가 파일의 마지막 스냅샷을 가져오는 것이 아니라 저장소 자체를 복제.
+  - 서버에 문제가 생길 경우 이 복제물로 작업이 가능하며 서버를 복원할 수도 있다.
+  - 리모트 저장소가 존재하며 리모트 저장소가 많을 수도 있다.
+ 
+  
 ### 사용자 설정
 
 ## Git 시작하기
@@ -49,4 +64,7 @@
 
 ## 출처
 - http://www.dreamy.pe.kr/zbxe/CodeClip/95408
-- https://nolboo.github.io/blog/2013/10/06/github-for-beginner/
+- https://nolboo.github.io/blog/2013/10/06/github-for-beginner
+- https://wikipedia.org
+- http://flowerykeyboard.tistory.com/1
+- http://www.dreamy.pe.kr/zbxe/CodeClip/95408
