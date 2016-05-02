@@ -61,6 +61,24 @@
 
 ### 내용 생성하기
 
+### 저장소 clone 하기
+
+### 변경내용 Push 및 Pull 하기
+
+### 변경사항 되돌리기
+
+### 태그 사용하기
+
+### 분기 및 합치기
+
+#### 분기 ( Branches )
+
+#### 합치기 ( Merging )
+
+### Merge confilict 해결하기
+
+### 패치 생성 및 적용하기
+
 ## 그 외
 
 ### Git 에서 fork 와 clone 의 차이
@@ -74,8 +92,7 @@
 * Git에게 ".gitignore"파일을 통해 무시하고 싶은 디렉토리를  알려줄 수 있다. 
 * 혹은 파일의 패턴을 알려줄 수 있다. 
   * 예를들어 git에게 "bin" 폴더를 무시하고 싶다고 알려주고 싶다면 ".gitignore"파일에 다음과 같이 쓰면 된다.
-  > .gitignore 파일  
-  > bin   
+    - bin   
 
 ### Markdown 문법
 - http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
