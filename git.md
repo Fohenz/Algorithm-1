@@ -45,15 +45,20 @@
 ## Git 시작하기
 
 ### 사용자 설정
-  # Git에서 사용될 사용자 설정하기  
-  # 당신의 이름으로 설정하면 된다.  
-  git config --global user.name "Lars Vogel"  
- 
-  # 이메일 주소도 당신의 것으로 설정하면 된다.  
-  git config --global user.email "Lars.Vogel@gmail.com"  
- 
-  # Set default so that always all changes are pushed to the repository   
-  git config --global push.default "matching"  
+* Git에서 사용될 사용자 설정하기  
+  - 당신의 이름으로 설정하면 된다.  
+  - git config --global user.name "Lars Vogel"  
+* 이메일 주소도 당신의 것으로 설정하면 된다.  
+  - git config --global user.email "Lars.Vogel@gmail.com"  
+* push default 방식 설정
+  - git config --global push.default 방식
+    * 방식
+      * matching 
+        - 원격 저장소의 브랜치와 일치하는 모든 로컬 브랜치를 Push
+      * simple
+        - 현재 작업중인 브랜치만 Push
+* Git 설정사항 확인
+  - git config --list 
 
 ### 내용 생성하기
 
@@ -67,6 +72,11 @@
       - 즉 fork 버튼만 놓고 보면 clone 이다.
 
 ### 특정 파일 (커밋) 무시하기
+* Git에게 ".gitignore"파일을 통해 무시하고 싶은 디렉토리를  알려줄 수 있다. 
+* 혹은 파일의 패턴을 알려줄 수 있다. 
+  * 예를들어 git에게 "bin" 폴더를 무시하고 싶다고 알려주고 싶다면 ".gitignore"파일에 다음과 같이 쓰면 된다.
+  > .gitignore 파일  
+  > bin   
 
 ### Markdown 문법
 - http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
