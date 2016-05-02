@@ -42,9 +42,18 @@
   - 리모트 저장소가 존재하며 리모트 저장소가 많을 수도 있다.
  
   
-### 사용자 설정
-
 ## Git 시작하기
+
+### 사용자 설정
+# Git에서 사용될 사용자 설정하기
+# 당신의 이름으로 설정하면 된다.
+git config --global user.name "Lars Vogel"
+ 
+# 이메일 주소도 당신의 것으로 설정하면 된다.
+git config --global user.email "Lars.Vogel@gmail.com"
+ 
+# Set default so that always all changes are pushed to the repository (이건 무슨말인지 잘 모르겠음)
+git config --global push.default "matching"
 
 ### 내용 생성하기
 
