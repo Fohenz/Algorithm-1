@@ -35,17 +35,17 @@
 
 ## 그 외
 
-#### Git 에서 fork 와 clone 의 차이
+### Git 에서 fork 와 clone 의 차이
 * Github 에서는 자주 fork 라는 단어를 접할 수 있다. 하지만, git 에는 fork 라는 명령어가 없다. 차이점이 있을까?
   *  fork 와 clone 의 차이
     * 결론적으로 애기하면, fork 와 clone 은 동일한 작업이다.
       - github 의 내부 문서에서 fork 라는 것은 clone 을 해서 기존의 프로젝트에 기여하기 위해 upstream 등의 remote 를 설정하고 fetch 등의 작업을 하기 위한 일련의 행위 라고 설명되어 있다.
       - 즉 fork 버튼만 놓고 보면 clone 이다.
 
-#### 특정 파일 (커밋) 무시하기
+### 특정 파일 (커밋) 무시하기
 
-#### Markdown 문법
-http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
+### Markdown 문법
+- http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
 
 ## 출처
 - http://www.dreamy.pe.kr/zbxe/CodeClip/95408
