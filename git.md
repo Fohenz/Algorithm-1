@@ -45,15 +45,15 @@
 ## Git 시작하기
 
 ### 사용자 설정
-  # Git에서 사용될 사용자 설정하기
-  # 당신의 이름으로 설정하면 된다.
-  git config --global user.name "Lars Vogel"
+  # Git에서 사용될 사용자 설정하기  
+  # 당신의 이름으로 설정하면 된다.  
+  git config --global user.name "Lars Vogel"  
  
-  # 이메일 주소도 당신의 것으로 설정하면 된다.
-  git config --global user.email "Lars.Vogel@gmail.com"
+  # 이메일 주소도 당신의 것으로 설정하면 된다.  
+  git config --global user.email "Lars.Vogel@gmail.com"  
  
-  # Set default so that always all changes are pushed to the repository 
-  git config --global push.default "matching"
+  # Set default so that always all changes are pushed to the repository   
+  git config --global push.default "matching"  
 
 ### 내용 생성하기
 
