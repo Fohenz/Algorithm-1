@@ -14,4 +14,5 @@
   - http://book.naver.com/bookdb/book_detail.nhn?bid=7058764
 
 ## 문제
-1. 2016/05/04 : Graduation 문제(https://www.algospot.com/judge/problem/read/GRADUATION)
+1. 2016/05/04 : Graduation 문제
+  - https://www.algospot.com/judge/problem/read/GRADUATION
