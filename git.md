@@ -3,8 +3,7 @@
 ## 개요
 ### Git 이란 무엇인가 ?
 
-#### VCS( Version Control System ) 와 DVCS( Distributed Version Control System )
-* VCS 
+
 ### Git 과 Github 의 차이점
 
 ### 주요 용어 정리
@@ -49,6 +48,5 @@
 http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
 
 ## 출처
-  * 출처 
-    - http://www.dreamy.pe.kr/zbxe/CodeClip/95408
-    - https://nolboo.github.io/blog/2013/10/06/github-for-beginner/
+- http://www.dreamy.pe.kr/zbxe/CodeClip/95408
+- https://nolboo.github.io/blog/2013/10/06/github-for-beginner/
