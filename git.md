@@ -59,12 +59,47 @@
 * Git 설정사항 확인
   - git config --list 
 
+### 주요 명령어
+* git init
+  - 깃 저장소를 초기화한다.
+  - 이것을 입력한 후에야 추가적인 깃 명령어가 가능하다.
+* git status
+  - 저장소 상태를 체크
+* git add
+  - 저장소에 새 파일을 추가하진 않는다.
+  - git 의 저장소 "스냅샷" 에 포함되게 한다.
+* git commit
+  - 어떤 변경사항이라도 만든 후, 저장소의 스냅샷을 직기 위해 입력한다. 
+* git branch
+  - 새로운 브랜치를 만들고 자신만의 변경사항과 파일 추가 등의 커밋 타임라인을 만든다.
+  - cat 이란 새로운 브랜치를 만들고 싶다면  
+    - git branch cat
+* git checkout
+  - 현재 위치하고 있지 않은 저장소를 “체크아웃”할 수 있다. 
+  - 이것은 체크하길 원하는 저장소로 옮겨가게 해주는 탐색 명령이다. 
+  - master 브랜치를 들여다 보고 싶으면, git checkout master를 사용할 수 있고, git checkout cats로 또 다른 브랜치를 들여다 볼 수 있다.
+* git merge
+  - 브랜치에서 작업을 끝내고, 모든 협업자가 볼 수 있는 master 브랜치로 병합할 수 있다.
+  - cat 브랜치에서 만든 모든 변경사항을 master 로 추가한다.
+    - git merge cats
+* git push
+  - 로컬 저장소의 커밋을 원격 저장소에 반영한다. 
+* git pull
+  - 현재 작업하고 있는 저장소의 최신 버전을 받는다.
+* git clone
+  -  
 ### 내용 생성하기
+* Repository 를 생성하는 과정이다
+  * 로컬 Repository 를 생성하여 원격 Repository 로 반영하거나 또는 원격 Repository 를 생성하고 로컬로 clone 할 수 있다.
+
+
 * 로컬 저장소 생성하기
-  - 원하는 폴더를 생성한다.
+  - 원하는 폴더를 생성한다. 
+    * 모든 Git 저장소는 .git 폴더에 저장되어 있으며 .git 폴더는 당신이 생성한 git 저장소 폴더안에 있다. 
+    * .git 폴더는 저장소의 환결설정 정보와 저장소의 완벽한 히스토리 정보를 담고 있다. 
     - cd ~/
-    - mkdir test
-    - cd test
+    - mkdir test.git
+    - cd test.git
   - Git 저장소로 초기화
     - git init
   - 저장소로 파일 추가 ( 폴더만으로는 원격에 저장소가 추가되지 않는다. )
@@ -78,6 +113,10 @@
 
 
 ### 저장소 clone 하기
+* 
+
+### 파일 삭제
+* 만일 버전관리를 받던 파일을 삭제했을 경우 git add 명령은 staging index 에서 파일 제거를 할 수 없다.
 
 ### 변경내용 Push 및 Pull 하기
 
