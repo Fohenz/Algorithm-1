@@ -75,9 +75,7 @@
   - cat 이란 새로운 브랜치를 만들고 싶다면  
     - git branch cat
 * git checkout
-  - 현재 위치하고 있지 않은 저장소를 “체크아웃”할 수 있다. 
-  - 이것은 체크하길 원하는 저장소로 옮겨가게 해주는 탐색 명령이다. 
-  - master 브랜치를 들여다 보고 싶으면, git checkout master를 사용할 수 있고, git checkout cats로 또 다른 브랜치를 들여다 볼 수 있다.
+  - 해당 브랜치로 이동.
 * git merge
   - 브랜치에서 작업을 끝내고, 모든 협업자가 볼 수 있는 master 브랜치로 병합할 수 있다.
   - cat 브랜치에서 만든 모든 변경사항을 master 로 추가한다.
@@ -86,17 +84,14 @@
   - 로컬 저장소의 커밋을 원격 저장소에 반영한다. 
   - push 만 입력할 경우 자동으로 origin( github ) 로 보내게 된다.
 * git pull
-  - 현재 작업하고 있는 저장소의 최신 버전을 받는다.
+  - 현재 작업하고 있는 저장소의 최신 버전을 원격으로부터 받는다.
 * git clone
   - 저장소를 복제한다.
-
 
 
 ### 내용 생성하기
 * Repository 를 생성하는 과정이다
   * 로컬 Repository 를 생성하여 원격 Repository 로 반영하거나 또는 원격 Repository 를 생성하고 로컬로 clone 할 수 있다.
-
-
 * 로컬 저장소 생성하기
   - 원하는 폴더를 생성한다. 
     * 모든 Git 저장소는 .git 폴더에 저장되어 있으며 .git 폴더는 당신이 생성한 git 저장소 폴더안에 있다. 
@@ -114,8 +109,7 @@
     - git remote add origin https://github.com/martinkang/test
   - 원격 저장소에 push 하기
     - git push -u origin master 
-    - 
-
+    
 
 ### 저장소 clone 하기
 * 원격의 저장소 clone 하기
@@ -126,9 +120,11 @@
 * 만일 버전관리를 받던 파일을 삭제했을 경우 git add 명령은 staging index 에서 파일 제거를 할 수 없다.
   - git add -A 옵션을 주면 파일 제거가 적용 된다. 
 
-### 변경내용 Push 및 Pull 하기
 
 ### 변경사항 되돌리기( revert )
+* Staging Index 에 추가된 거 취소하기
+  - git rm --cached <filename>
+    - git rm 은 working tree 에서 file 을 삭제하는 명령인데, --cached 를 지정하게 되면 지정한 file 을 삭제할 수 있다.
 * working copy 에서 새로운 파일을 생성했는데 커밋하고 싶지 않을 때 ( 아직 Staging Index 에 추가되지 않았을 경우 )
   - touch test
   - echo "test" > test
@@ -149,10 +145,17 @@
     - git checkout test.txt
 * 예전 커밋된 버전중에 구버전으로 체크아웃 하고싶은 경우
   - git log 명령을 치면 commit 이름이 암호문 처럼 길게 나오는데 이 커밋 이름( commit_name )을 쓰면 된다.
-    - git checkout commit_name
+    - git revert commit_name
 
 
-### 분기 및 합치기
+### 변경내용 Push 및 Pull
+* Push 는 현재 저장소의 최신 변경 내용을 다른 저장소로 보내는 것이다.
+  - git push 만 입력할 경우 기본적으로 origin ( remote ) 로 전송된다.
+* Pull 은 현재 저장소를 다른 저장소의 최신 변경 내용으로 변경하는 것이다.
+  - git pull 만 입력할 경우 기본적으로 origin( remote ) 의 최신 버전으로 변경된다.
+  - 
+
+### 분기
 
 #### 분기 ( Branches )
 * 로컬 저장소의 분기 목록
@@ -164,6 +167,7 @@
   - git checkout test
 ##### 분기 삭제하기
   - git branch -d test
+
 
 ## 그 외
 
@@ -179,6 +183,10 @@
 * 혹은 파일의 패턴을 알려줄 수 있다. 
   * 예를들어 git에게 "bin" 폴더를 무시하고 싶다고 알려주고 싶다면 ".gitignore"파일에 다음과 같이 쓰면 된다.
     - bin   
+
+### 생성 및 수정자 확인
+  - git blame filename
+
 
 ### Markdown 문법
 - http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
