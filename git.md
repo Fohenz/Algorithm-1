@@ -129,6 +129,14 @@
 ### 변경내용 Push 및 Pull 하기
 
 ### 변경사항 되돌리기( revert )
+* working copy 에서 새로운 파일을 생성했는데 커밋하고 싶지 않을 때 ( 아직 Staging Index 에 추가되지 않았을 경우 )
+  - touch test
+  - echo "test" > test
+  - git clean -n
+    - 변경 사항 취소시 무슨 파일에 영향이 오는지 출력된다.
+    - 여기서는 "Would remove test"
+  - git clean -f
+    - 지운다.
 * Staging Index 에 추가되지 않았을 경우
   - checkout 을 하면 이전 버전으로 돌아갈 수 있다.
     - echo "test" > test.txt
@@ -136,8 +144,12 @@
 * Staging Index 에 변경내용이 적용됬을 경우 ( git add 또는 commit 시 )
   - Staging Index 의 test.txt 를 원래대로 복원한다.
     - git reset HEAD test.txt
+      - HEAD 는 최신 버전을 의미한다.
   - Staging Index 로 부터 본래 파일을 Working Copy 로 checkout 함으로서 본래 내용을 복원한다.
     - git checkout test.txt
+* 예전 커밋된 버전중에 구버전으로 체크아웃 하고싶은 경우
+  - git log 명령을 치면 commit 이름이 암호문 처럼 길게 나오는데 이 커밋 이름( commit_name )을 쓰면 된다.
+    - git checkout commit_name
 
 
 ### 분기 및 합치기
