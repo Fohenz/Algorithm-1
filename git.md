@@ -123,22 +123,25 @@
   
 ### 파일 삭제
 * 만일 버전관리를 받던 파일을 삭제했을 경우 git add 명령은 staging index 에서 파일 제거를 할 수 없다.
+  - git add -A 옵션을 주면 파일 제거가 적용 된다. 
 
 ### 변경내용 Push 및 Pull 하기
 
 ### 변경사항 되돌리기
 
-### 태그 사용하기
 
 ### 분기 및 합치기
 
 #### 분기 ( Branches )
-
-#### 합치기 ( Merging )
-
-### Merge confilict 해결하기
-
-### 패치 생성 및 적용하기
+* 로컬 저장소의 분기 목록
+  - git branch
+* 모든 분기 보기 ( 원격 분기 포함 )
+  - git branch -a
+* 새로운 분기 생성
+  - git branch test
+  - git checkout test
+##### 분기 삭제하기
+  - git branch -d test
 
 ## 그 외
 
