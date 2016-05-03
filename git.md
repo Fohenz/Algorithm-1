@@ -110,10 +110,11 @@
     - git add readme.md
   - 로컬 커밋
     - git commit -m "메세지"
-  - 원격 저장소에 생성한 로컬 저장소 추가하기  
+  - 원격( remote ) 저장소에 생성한 로컬 저장소 연결하기
     - git remote add origin https://github.com/martinkang/test
   - 원격 저장소에 push 하기
     - git push -u origin master 
+    - 
 
 
 ### 저장소 clone 하기
@@ -127,7 +128,16 @@
 
 ### 변경내용 Push 및 Pull 하기
 
-### 변경사항 되돌리기
+### 변경사항 되돌리기( revert )
+* Staging Index 에 추가되지 않았을 경우
+  - checkout 을 하면 이전 버전으로 돌아갈 수 있다.
+    - echo "test" > test.txt
+    - git checkout test.txt
+* Staging Index 에 변경내용이 적용됬을 경우 ( git add 또는 commit 시 )
+  - Staging Index 의 test.txt 를 원래대로 복원한다.
+    - git reset HEAD test.txt
+  - Staging Index 로 부터 본래 파일을 Working Copy 로 checkout 함으로서 본래 내용을 복원한다.
+    - git checkout test.txt
 
 
 ### 분기 및 합치기
