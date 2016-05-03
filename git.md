@@ -84,10 +84,14 @@
     - git merge cats
 * git push
   - 로컬 저장소의 커밋을 원격 저장소에 반영한다. 
+  - push 만 입력할 경우 자동으로 origin( github ) 로 보내게 된다.
 * git pull
   - 현재 작업하고 있는 저장소의 최신 버전을 받는다.
 * git clone
-  -  
+  - 저장소를 복제한다.
+
+
+
 ### 내용 생성하기
 * Repository 를 생성하는 과정이다
   * 로컬 Repository 를 생성하여 원격 Repository 로 반영하거나 또는 원격 Repository 를 생성하고 로컬로 clone 할 수 있다.
@@ -113,8 +117,10 @@
 
 
 ### 저장소 clone 하기
-* 
-
+* 원격의 저장소 clone 하기
+  - git clone https://github.com/martinkang/test 
+   
+  
 ### 파일 삭제
 * 만일 버전관리를 받던 파일을 삭제했을 경우 git add 명령은 staging index 에서 파일 제거를 할 수 없다.
 
