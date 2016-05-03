@@ -60,6 +60,22 @@
   - git config --list 
 
 ### 내용 생성하기
+* 로컬 저장소 생성하기
+  - 원하는 폴더를 생성한다.
+    - cd ~/
+    - mkdir test
+    - cd test
+  - Git 저장소로 초기화
+    - git init
+  - 저장소로 파일 추가 ( 폴더만으로는 원격에 저장소가 추가되지 않는다. )
+    - git add readme.md
+  - 로컬 커밋
+    - git commit -m "메세지"
+  - 원격 저장소에 생성한 로컬 저장소 추가하기  
+    - git remote add origin https://github.com/martinkang/test
+  - 원격 저장소에 push 하기
+    - git push -u origin master 
+
 
 ### 저장소 clone 하기
 
