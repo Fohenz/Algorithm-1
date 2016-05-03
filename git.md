@@ -59,6 +59,7 @@
 * Git 설정사항 확인
   - git config --list 
 
+
 ### 주요 명령어
 * git init
   - 깃 저장소를 초기화한다.
@@ -109,7 +110,7 @@
     - git remote add origin https://github.com/martinkang/test
   - 원격 저장소에 push 하기
     - git push -u origin master 
-    
+
 
 ### 저장소 clone 하기
 * 원격의 저장소 clone 하기
@@ -153,7 +154,8 @@
   - git push 만 입력할 경우 기본적으로 origin ( remote ) 로 전송된다.
 * Pull 은 현재 저장소를 다른 저장소의 최신 변경 내용으로 변경하는 것이다.
   - git pull 만 입력할 경우 기본적으로 origin( remote ) 의 최신 버전으로 변경된다.
-  - 
+
+
 
 ### 분기
 
@@ -178,6 +180,7 @@
     - github 의 내부 문서에서 fork 라는 것은 clone 을 해서 기존의 프로젝트에 기여하기 위해 upstream 등의 remote 를 설정하고 fetch 등의 작업을 하기 위한 일련의 행위 라고 설명되어 있다.
     - 즉 fork 버튼만 놓고 보면 clone 이다.
 
+
 ### 특정 파일 (커밋) 무시하기
 * Git에게 ".gitignore"파일을 통해 무시하고 싶은 디렉토리를  알려줄 수 있다. 
 * 혹은 파일의 패턴을 알려줄 수 있다. 
@@ -190,6 +193,7 @@
 
 ### Markdown 문법
 - http://blog.kalkin7.com/2014/02/05/wordpress-markdown-quick-reference-for-koreans/
+
 
 ## 출처
 - http://www.dreamy.pe.kr/zbxe/CodeClip/95408
