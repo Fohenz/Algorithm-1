@@ -167,7 +167,7 @@
 * 새로운 분기 생성
   - git branch test
   - git checkout test
-##### 분기 삭제하기
+* 분기 삭제하기
   - git branch -d test
 
 
