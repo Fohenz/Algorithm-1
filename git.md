@@ -208,10 +208,13 @@
 
 
 ## 출처
-- http://www.dreamy.pe.kr/zbxe/CodeClip/95408
-- https://nolboo.github.io/blog/2013/10/06/github-for-beginner
-- https://wikipedia.org
-- http://flowerykeyboard.tistory.com/1
-- http://www.dreamy.pe.kr/zbxe/CodeClip/95408
-- https://backlogtool.com/git-guide/kr/
-- https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0
+- git 사용 전반적인 내용
+  - http://www.dreamy.pe.kr/zbxe/CodeClip/95408
+- git 주요 명령어
+  - https://nolboo.github.io/blog/2013/10/06/github-for-beginner
+- 버전 관리 시스템이란?
+  - http://flowerykeyboard.tistory.com/1
+- git 입문
+  - https://backlogtool.com/git-guide/kr/
+- git reset, revert, checkout 상세히
+  - https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0
