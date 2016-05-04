@@ -49,13 +49,6 @@
   - git config --global user.name "minku"  
 * Git 에서 사용할 이메일 설정
   - git config --global user.email "minku@gmail.com"  
-* push default 방식 설정
-  - git config --global push.default 방식
-    * 방식
-      * matching 
-        - 원격 저장소의 브랜치와 일치하는 모든 로컬 브랜치를 Push
-      * simple
-        - 현재 작업중인 브랜치만 Push
 * Git 설정사항 확인
   - git config --list 
 
