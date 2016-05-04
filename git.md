@@ -78,11 +78,13 @@
 * git checkout
   - 해당 브랜치로 이동. ( 해당 브랜치의 HEAD 로 이동한다. )
 * git reset
-  - 최근의 git commit 을 되돌린다. ( git reset HEAD~ 로 할경우에 한단계 더 뒤로 )
+  - 최근의 git commit 을 되돌린다. ( git reset HEAD~ ( HEAD~ 는 HEAD 의 부모 ) )
   - Staging index 나 워킹 디렉토리는 변하지 않고 HEAD 가 가르키는 커밋만 바뀐다.
-  - --mixed 옵션
+  * --mixed 옵션
     - Staging Index 까지 되돌린다.
       - git reset --mixed HEAD~
+  * --hard 옵션
+    - 워킹 디렉토리까지 되돌린다.
 * git merge
   - 브랜치에서 작업을 끝내고, 모든 협업자가 볼 수 있는 master 브랜치로 병합할 수 있다.
   - cat 브랜치에서 만든 모든 변경사항을 master 로 추가한다.
@@ -207,3 +209,4 @@
 - http://flowerykeyboard.tistory.com/1
 - http://www.dreamy.pe.kr/zbxe/CodeClip/95408
 - https://backlogtool.com/git-guide/kr/
+- https://git-scm.com/book/ko/v2/Git-%EB%8F%84%EA%B5%AC-Reset-%EB%AA%85%ED%99%95%ED%9E%88-%EC%95%8C%EA%B3%A0-%EA%B0%80%EA%B8%B0
