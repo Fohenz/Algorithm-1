@@ -28,7 +28,7 @@
 * Revision
   - 소스코드의 버전을 가리킨다. 
   - Git은 SHA1 ids으로 리비전을 구분한다. SHA1 ids는 160비트 으로 긴 편이고 16진수로 표현된다. 
-  - 가장 최신버전은 HEAD로 불리는 주소로 표현되며 이전 버전은 HEAD~1으로 계속 그런 방식으로 버전이름을 가리킬 수 있다.
+  - 가장 최신버전은 HEAD로 불리는 주소로 표현되며 이전 버전은 HEAD~1, HEAD~2 으로 계속 그런 방식으로 버전이름을 가리킬 수 있다.
 * Staging Index
   - Git 은 당신이 변경사항들을 명확하게 표기하길 요구하고 저장에 적절하게 수정사항들이 표기되길 원한다. 
   - 예를들어 당신이 새로운 파일을 다음 변경사항에 적용하고 싶으면 소위 'staging index'에 그 파일들을 'add file' 명령을 이용해 넣으면 된다. 
@@ -76,7 +76,13 @@
   - cat 이란 새로운 브랜치를 만들고 싶다면  
     - git branch cat
 * git checkout
-  - 해당 브랜치로 이동.
+  - 해당 브랜치로 이동. ( 해당 브랜치의 HEAD 로 이동한다. )
+* git reset
+  - 최근의 git commit 을 되돌린다. ( git reset HEAD~ 로 할경우에 한단계 더 뒤로 )
+  - Staging index 나 워킹 디렉토리는 변하지 않고 HEAD 가 가르키는 커밋만 바뀐다.
+  - --mixed 옵션
+    - Staging Index 까지 되돌린다.
+      - git reset --mixed HEAD~
 * git merge
   - 브랜치에서 작업을 끝내고, 모든 협업자가 볼 수 있는 master 브랜치로 병합할 수 있다.
   - cat 브랜치에서 만든 모든 변경사항을 master 로 추가한다.
@@ -88,6 +94,7 @@
   - 현재 작업하고 있는 저장소의 최신 버전을 원격으로부터 받는다.
 * git clone
   - 저장소를 복제한다.
+
 
 
 ### 내용 생성하기
@@ -199,3 +206,4 @@
 - https://wikipedia.org
 - http://flowerykeyboard.tistory.com/1
 - http://www.dreamy.pe.kr/zbxe/CodeClip/95408
+- https://backlogtool.com/git-guide/kr/
