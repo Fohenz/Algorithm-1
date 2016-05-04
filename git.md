@@ -69,15 +69,22 @@
   - cat 이란 새로운 브랜치를 만들고 싶다면  
     - git branch cat
 * git checkout
-  - 해당 브랜치로 이동. ( 해당 브랜치의 HEAD 로 이동한다. )
+  - git checkout [branch] HEAD 자체를 다른 branch 로 옮긴다. 
+    - git reset 은 HEAD 가 가리키는 branch 를 업데이트 한다.
+  - git reset --hard [branch] 명령과 비슷하게 [branch] 스냅샷을 기준으로 세 트리를 조작한다. 하지만, 두 가지 사항이 다르다.
+  - 저장하지 않은 것이 있는지 확인해서 날려버리지 않는다는 것을 보장
+    - git reset --hard 는 무조건 날려버림
 * git reset
   - 최근의 git commit 을 되돌린다. ( git reset HEAD~ ( HEAD~ 는 HEAD 의 부모 ) )
   - Staging index 나 워킹 디렉토리는 변하지 않고 HEAD 가 가르키는 커밋만 바뀐다.
   * --mixed 옵션
     - Staging Index 까지 되돌린다.
       - git reset --mixed HEAD~
+      - git commit 과 git add 를 되돌린다.
   * --hard 옵션
-    - 워킹 디렉토리까지 되돌린다.
+    - git commit 과 git add 를 되돌리고 워킹 디렉토리까지 되돌린다.
+  * git reset 파일명
+    -  git --mixed HEAD 파일명과 동일
 * git revert
   - git revert HEAD
     -  HEAD 에서 변경한 내역을 취소하는 새로운 커밋을 발행  ( undo commit )
