@@ -78,6 +78,9 @@
       - git reset --mixed HEAD~
   * --hard 옵션
     - 워킹 디렉토리까지 되돌린다.
+* git revert
+  - git revert HEAD
+    -  HEAD 에서 변경한 내역을 취소하는 새로운 커밋을 발행  ( undo commit )
 * git merge
   - 브랜치에서 작업을 끝내고, 모든 협업자가 볼 수 있는 master 브랜치로 병합할 수 있다.
   - cat 브랜치에서 만든 모든 변경사항을 master 로 추가한다.
