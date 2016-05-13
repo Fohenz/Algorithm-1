@@ -33,7 +33,7 @@ If multiple answers are possible, you may output any of them.
 ## Sample
 
 
-- Input 
+### Input 
 
     4
     1 1 1 10
@@ -41,7 +41,7 @@ If multiple answers are possible, you may output any of them.
     1 1 3 2
     1 2 3 1
 
-- Output 
+### Output 
 
     Case #1: 1
     1 1 1
@@ -57,7 +57,7 @@ If multiple answers are possible, you may output any of them.
     1 1 3
     1 2 1
 
-- 예제 설명
+### 예제 설명
 
 The sample output displays one set of answers to the sample cases. Other answers may be possible.
 
@@ -74,7 +74,9 @@ Note that the numbers of the jacket, pants, and shirt within an individual outfi
 In Case #3, you have only one jacket + pants combination which you must keep reusing, so no matter which shirts you wear, you cannot form more than K = 2 different outfits.
 
 In Case #4, another possible maximally large set of outfits is:
+
 1 2 2
+
 1 1 1
 
 #### 한글 해석
