@@ -1,55 +1,76 @@
-# 졸업학기
+## Problem
 
-## 문제 정보
-* 시간 제한
-	- 3000ms
-* 제한 메모리 
-	- 65536kb
+A small fire started in the senate room, and it needs to be evacuated!
 
+There are some senators in the senate room, each of whom belongs to of one of N political parties. Those parties are named after the first N (uppercase) letters of the English alphabet.
 
-## 문제
-1학년은 노는 게 남는 거란 선배의 말을 철석같이 믿고, 전공 과목은 다 수강철회하고 교양 과목은 다 F 받는 방탕한 1학년을 보냈던 태우는 이제 와서 자신의 행동을 후회하고 있습니다. 졸업 전에 채워야 할 학점이 너무 많기 때문입니다. 졸업 필수 학점을 채우려면 전공 과목 N 개 중 K 개 이상을 수강해야 합니다. 그런데 각 과목은 해당 과목의 선수과목을 미리 수강했어야만 수강할 수 있으며, 각 학기마다 모든 과목이 개설되는 것이 아니기 때문에 문제가 복잡해졌습니다. 어떻게 해야 최소 학기에 졸업을 할 수 있을까요?
+The emergency door is wide enough for up to two senators, so in each step of the evacuation, you may choose to remove either one or two senators from the room.
 
-각 과목의 정보와 앞으로 M 학기 동안 개설될 과목의 목록이 주어질 때, 태우가 최소 몇 학기를 다녀야 졸업할 수 있는지 계산하는 프로그램을 작성하세요. 한 과목도 수강하지 않는 학기는 휴학한 것으로 하며, 다닌 학기 수에 포함되지 않습니다.
+The senate rules indicate the senators in the room may vote on any bill at any time, even in the middle of an evacuation! So, the senators must be evacuated in a way that ensures that no party ever has an absolute majority. That is, it can never be the case after any evacuation step that more than half of the senators in the senate room belong to the same party.
 
+Can you construct an evacuation plan? The senate is counting on you!
 
-## 입력
-입력의 첫 줄에는 테스트 케이스의 수 C (C <= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 전공 과목의 수 N (1 <= N <= 12), 들어야 할 과목의 수 K (0 <= K <= N), 학기의 수 M (1 <= M <= 10) 과 태우가 한 학기에 최대로 들을 수 있는 과목의 수 L (1 <= L <= 10)이 주어집니다. 각 과목에는 0부터 N-1 까지의 번호가 매겨져 있습니다.
+### Input
 
-그 후 N 줄에 0번 과목부터 순서대로 각 과목의 정보가 주어집니다. 이 줄에는 해당 과목의 선수 과목의 수 Ri (0 <= Ri <= N-1) 가 처음 주어지고, 그 후 Ri 개의 정수로 선수 과목의 번호가 주어집니다.
+The first line of the input gives the number of test cases, T. T test cases follow. Each test case consists of two lines. The first line contains a single integer N, the number of parties. The second line contains N integers, P1, P2, ..., PN, where Pi represents the number of senators of the party named after the i-th letter of the alphabet.
 
-그 후 M 줄에는 이번 학기부터 순서대로 각 학기의 정보가 주어집니다. 각 줄에는 해당 학기에 개설되는 과목의 숫자 Ci (1 <= Ci <= 10) 가 주어지고, 그 후 Ci 개의 정수로 개설되는 과목의 번호들이 주어집니다.
+### Output
 
+For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is the evacuation plan. The plan must be a space-separated list of instructions, in the order in which they are to be carried out, where each instruction is either one or two characters, representing the parties of the senators to evacuate in each step.
 
-## 출력
-각 테스트 케이스마다 한 줄에 태우가 다녀야 할 최소 학기 수를 출력합니다. M 학기 내에 졸업할 수 없는 경우 IMPOSSIBLE을 출력합니다.
+It is guaranteed that at least one valid evacuation plan will exist. If multiple evacuation plans are valid, you may output any of them.
 
+### Limits
 
-## 예제 입력
+    1 ≤ T ≤ 50.
+    No party will have an absolute majority before the start of the evacuation.
+    1 ≤ Pi ≤ 1000, for all i.
+    Small dataset
 
-2  
-4 4 4 4  
-0  
-1 0  
-3 0 1 3  
-0  
-4 0 1 2 3   
-4 0 1 2 3   
-3 0 1 3   
-4 0 1 2 3   
-4 2 2 4  
-1 1  
-0  
-1 3  
-1 2  
-3 0 2 3  
-3 1 2 3  
+    2 ≤ N ≤ 3.
+    sum of all Pi ≤ 9.
+    Large dataset
+
+    2 ≤ N ≤ 26.
+    sum of all Pi ≤ 1000.
+    
+### Sample
 
 
-## 예제 출력
-3   
-IMPOSSIBLE
+### Input 
+
+    4
+    2
+    2 2
+    3
+    3 2 2
+    3
+    1 1 2
+    3
+    2 3 1
+
+### Output 
+
+    Case #1: AB BA
+    Case #2: AA BC C BA
+    Case #3: C C AB
+    Case #4: BA BB CA
+
+### 예제 설명
+The sample output displays one set of answers to the sample cases. Other answers may be possible.
+
+In Case #1, there are two senators from each of the parties A and B. If we remove one from each party every time, the perfect balance is maintained until evacuation is complete.
+
+Case #2 proceeds as follows:
+
+Initially in the room: 3 A, 2 B, 2 C.
+Evacuate AA. Still in the room: 1 A, 2 B, 2 C.
+Evacuate BC. Still in the room: 1 A, 1 B, 1 C.
+Evacuate C. Still in the room: 1 A, 1 B.
+Evacuate AB. Evacuation complete!
+Note that it would not be valid to begin the evacuation with BC, which would leave 3 A, 1 B, and 1 C in the room; party A would have an absolute majority (3 out of 5 = 60%).
+
+For Case #3, note that CC AB would also be a valid answer, and C C AB is also valid even though it requires three evacuation steps instead of two.
 
 
-## 원문 링크
-https://www.algospot.com/judge/problem/read/GRADUATION
+## 한글 해석
