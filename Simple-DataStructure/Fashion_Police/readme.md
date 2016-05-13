@@ -8,17 +8,17 @@ In New York, the Fashion Police officers are always watching and keeping track o
 
 You will wear one outfit per day. Can you figure out the largest possible number of days you can avoid being taken to Fashion Jail and produce a list of outfits to use each day?
 
-# Input
+## Input
 
 The first line of the input gives the number of test cases, T. T test cases follow; each consists of one line with four integers J, P, S, and K.
 
-# Output
+## Output
 
 For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is an integer: the maximum number of days you will be able to avoid being taken to Fashion Jail. Then output y more lines, each of which consists of three integers: the numbers of the jacket, pants, and shirt (in that order) for one day's outfit. The list of outfits can be in any order, but the outfits must not cause you to go to Fashion Jail as described in the statement above.
 
 If multiple answers are possible, you may output any of them.
 
-# Limits
+### Limits
 
 1 ≤ T ≤ 100.
 1 ≤ J ≤ P ≤ S.
@@ -32,16 +32,15 @@ S ≤ 10.
 Sample
 
 
-Input 
+### Input 
 
-    	
-4
-1 1 1 10
-1 2 3 2
-1 1 3 2
-1 2 3 1
+    4
+    1 1 1 10
+    1 2 3 2
+    1 1 3 2
+    1 2 3 1
 
-Output 
+### Output 
 
     
 Case #1: 1
@@ -58,7 +57,7 @@ Case #4: 2
 1 1 3
 1 2 1
 
-# 설명
+### 설명
 
 The sample output displays one set of answers to the sample cases. Other answers may be possible.
 
