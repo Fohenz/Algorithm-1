@@ -20,19 +20,20 @@ If multiple answers are possible, you may output any of them.
 
 ### Limits
 
-1 ≤ T ≤ 100.
-1 ≤ J ≤ P ≤ S.
-1 ≤ K ≤ 10.
-Small dataset
+    1 ≤ T ≤ 100.
+    1 ≤ J ≤ P ≤ S.
+    1 ≤ K ≤ 10.
+    Small dataset
 
-S ≤ 3.
-Large dataset
+    S ≤ 3.
+    Large dataset
 
-S ≤ 10.
-Sample
+    S ≤ 10.
+
+## Sample
 
 
-### Input 
+- Input 
 
     4
     1 1 1 10
@@ -40,7 +41,7 @@ Sample
     1 1 3 2
     1 2 3 1
 
-### Output 
+- Output 
 
     Case #1: 1
     1 1 1
@@ -56,7 +57,7 @@ Sample
     1 1 3
     1 2 1
 
-### 예제 설명
+- 예제 설명
 
 The sample output displays one set of answers to the sample cases. Other answers may be possible.
 
