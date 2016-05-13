@@ -1,5 +1,7 @@
 ## Problem
 
+- https://code.google.com/codejam/contest/4314486/dashboard#s=p2
+
 You are so excited about the 2016 Code Jam World Finals that you just moved to New York. You have brought along J different jackets (numbered 1 through J), P different pairs of pants (numbered 1 through P), and S different shirts (numbered 1 through S). You have at least as many shirts as pairs of pants, and at least as many pairs of pants as jackets. (J ≤ P ≤ S.)
 
 Every day, you will pick one jacket, one pair of pants, and one shirt to wear as an outfit. You wash all of your garments every night so all of your garments are available to use each day.
@@ -75,8 +77,8 @@ In Case #3, you have only one jacket + pants combination which you must keep reu
 
 In Case #4, another possible maximally large set of outfits is:
 
-1 2 2
-1 1 1
+    1 2 2
+    1 1 1
 
 ### 한글 해석
 첫번째 입력값은 테스트 케이스의 갯수 T이다.
