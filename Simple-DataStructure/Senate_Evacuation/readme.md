@@ -1,5 +1,7 @@
 ## Problem
 
+- https://code.google.com/codejam/contest/4314486/dashboard#s=p0
+
 A small fire started in the senate room, and it needs to be evacuated!
 
 There are some senators in the senate room, each of whom belongs to of one of N political parties. Those parties are named after the first N (uppercase) letters of the English alphabet.
