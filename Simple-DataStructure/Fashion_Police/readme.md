@@ -1,55 +1,79 @@
-# 졸업학기
+# Problem
 
-## 문제 정보
-* 시간 제한
-	- 3000ms
-* 제한 메모리 
-	- 65536kb
+You are so excited about the 2016 Code Jam World Finals that you just moved to New York. You have brought along J different jackets (numbered 1 through J), P different pairs of pants (numbered 1 through P), and S different shirts (numbered 1 through S). You have at least as many shirts as pairs of pants, and at least as many pairs of pants as jackets. (J ≤ P ≤ S.)
 
+Every day, you will pick one jacket, one pair of pants, and one shirt to wear as an outfit. You wash all of your garments every night so all of your garments are available to use each day.
 
-## 문제
-1학년은 노는 게 남는 거란 선배의 말을 철석같이 믿고, 전공 과목은 다 수강철회하고 교양 과목은 다 F 받는 방탕한 1학년을 보냈던 태우는 이제 와서 자신의 행동을 후회하고 있습니다. 졸업 전에 채워야 할 학점이 너무 많기 때문입니다. 졸업 필수 학점을 채우려면 전공 과목 N 개 중 K 개 이상을 수강해야 합니다. 그런데 각 과목은 해당 과목의 선수과목을 미리 수강했어야만 수강할 수 있으며, 각 학기마다 모든 과목이 개설되는 것이 아니기 때문에 문제가 복잡해졌습니다. 어떻게 해야 최소 학기에 졸업을 할 수 있을까요?
+In New York, the Fashion Police officers are always watching and keeping track of what everyone wears every day. If they find out that you have worn the exact same outfit twice, you will immediately be taken to the Fashion Jail on 5th Avenue for a mandatory makeover; you definitely want to avoid that! You will also immediately be taken to Fashion Jail if they find out that you have worn the same two-garment combination more than K times in total. A combination consists of a particular jacket worn with a particular pair of pants, a particular jacket worn with a particular shirt, or a particular pair of pants worn with a particular shirt. For example, in the set of outfits (jacket 1, pants 2, shirt 3) and (jacket 1, pants 1, shirt 3), the combination (jacket 1, shirt 3) appears twice, whereas the combination (pants 1, shirt 3) only appears once.
 
-각 과목의 정보와 앞으로 M 학기 동안 개설될 과목의 목록이 주어질 때, 태우가 최소 몇 학기를 다녀야 졸업할 수 있는지 계산하는 프로그램을 작성하세요. 한 과목도 수강하지 않는 학기는 휴학한 것으로 하며, 다닌 학기 수에 포함되지 않습니다.
+You will wear one outfit per day. Can you figure out the largest possible number of days you can avoid being taken to Fashion Jail and produce a list of outfits to use each day?
 
+# Input
 
-## 입력
-입력의 첫 줄에는 테스트 케이스의 수 C (C <= 50) 가 주어집니다. 각 테스트 케이스의 첫 줄에는 전공 과목의 수 N (1 <= N <= 12), 들어야 할 과목의 수 K (0 <= K <= N), 학기의 수 M (1 <= M <= 10) 과 태우가 한 학기에 최대로 들을 수 있는 과목의 수 L (1 <= L <= 10)이 주어집니다. 각 과목에는 0부터 N-1 까지의 번호가 매겨져 있습니다.
+The first line of the input gives the number of test cases, T. T test cases follow; each consists of one line with four integers J, P, S, and K.
 
-그 후 N 줄에 0번 과목부터 순서대로 각 과목의 정보가 주어집니다. 이 줄에는 해당 과목의 선수 과목의 수 Ri (0 <= Ri <= N-1) 가 처음 주어지고, 그 후 Ri 개의 정수로 선수 과목의 번호가 주어집니다.
+# Output
 
-그 후 M 줄에는 이번 학기부터 순서대로 각 학기의 정보가 주어집니다. 각 줄에는 해당 학기에 개설되는 과목의 숫자 Ci (1 <= Ci <= 10) 가 주어지고, 그 후 Ci 개의 정수로 개설되는 과목의 번호들이 주어집니다.
+For each test case, output one line containing Case #x: y, where x is the test case number (starting from 1) and y is an integer: the maximum number of days you will be able to avoid being taken to Fashion Jail. Then output y more lines, each of which consists of three integers: the numbers of the jacket, pants, and shirt (in that order) for one day's outfit. The list of outfits can be in any order, but the outfits must not cause you to go to Fashion Jail as described in the statement above.
 
+If multiple answers are possible, you may output any of them.
 
-## 출력
-각 테스트 케이스마다 한 줄에 태우가 다녀야 할 최소 학기 수를 출력합니다. M 학기 내에 졸업할 수 없는 경우 IMPOSSIBLE을 출력합니다.
+# Limits
 
+1 ≤ T ≤ 100.
+1 ≤ J ≤ P ≤ S.
+1 ≤ K ≤ 10.
+Small dataset
 
-## 예제 입력
+S ≤ 3.
+Large dataset
 
-2  
-4 4 4 4  
-0  
-1 0  
-3 0 1 3  
-0  
-4 0 1 2 3   
-4 0 1 2 3   
-3 0 1 3   
-4 0 1 2 3   
-4 2 2 4  
-1 1  
-0  
-1 3  
-1 2  
-3 0 2 3  
-3 1 2 3  
+S ≤ 10.
+Sample
 
 
-## 예제 출력
-3   
-IMPOSSIBLE
+Input 
 
+    	
+4
+1 1 1 10
+1 2 3 2
+1 1 3 2
+1 2 3 1
 
-## 원문 링크
-https://www.algospot.com/judge/problem/read/GRADUATION
+Output 
+
+    
+Case #1: 1
+1 1 1
+Case #2: 4
+1 1 2
+1 2 3
+1 2 1
+1 1 1
+Case #3: 2
+1 1 2
+1 1 1
+Case #4: 2
+1 1 3
+1 2 1
+
+# 설명
+
+The sample output displays one set of answers to the sample cases. Other answers may be possible.
+
+In Case #1, even though the Fashion Police officers have set a lenient K value of 10, there is only one possible outfit that you can form, so you can only avoid Fashion Jail for one day.
+
+In Case #2, adding any other outfit would cause you to go to Fashion Jail:
+
+Adding 1 1 3 would use the combination (jacket 1, pants 1) more than 2 times.
+Adding 1 2 2 would use the combination (jacket 1, pants 2) more than 2 times.
+In this case, any set of 5 outfits would include at least one fashion violation.
+
+Note that the numbers of the jacket, pants, and shirt within an individual outfit do not have to be in nondecreasing order in the same way that J, P, and S do.
+
+In Case #3, you have only one jacket + pants combination which you must keep reusing, so no matter which shirts you wear, you cannot form more than K = 2 different outfits.
+
+In Case #4, another possible maximally large set of outfits is:
+1 2 2
+1 1 1
